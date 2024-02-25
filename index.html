@@ -12,46 +12,48 @@
     <h1>휠라</h1>
 
     <div class="pro">
-        <a href="products/product01.html">
+        <a data-num="1" href="products/product01.html"  target="_blank" >
             <img src="resources/images/1.jpg" alt="">
             <p>신발 1</p>
         </a>
-        <a href="products/product01.html">
+        <a data-num="2"  href="products/product02.html" target="_blank" >
             <img src="resources/images/2.jpg" alt="">
             <p>신발 2</p>
         </a>
-        <a href="products/product01.html">
+        <a data-num="3"  href="products/product03.html" target="_blank" >
             <img src="resources/images/3.jpg" alt="">
             <p>신발 3</p>
         </a>
-        <a href="products/product01.html">
+        <a data-num="4"  href="products/product04.html" target="_blank" >
             <img src="resources/images/4.jpg" alt="">
             <p>신발 4</p>
         </a>
-        <a href="products/product01.html">
+        <a data-num="5"  href="products/product05.html" target="_blank" >
             <img src="resources/images/5.jpg" alt="">
             <p>신발 5</p>
         </a>
-        <a href="products/product01.html">
+        <a data-num="6"  href="products/product06.html" target="_blank" >
             <img src="resources/images/6.jpg" alt="">
             <p>신발 6</p>
         </a>
     </div>
-    
+    <script>
+        // 
+        //     function viewPage(e){
+        // let v_num = e.dataset.num;
+        // alert(v_num)
+        // resent_p.
+
+        // localStorage.setItem("p_num", v_num);
+ 
+        // console.log(v_num)
+    // }
+    </script>
     <aside>
         <p><strong>최근 본 상품</strong></p>
-        <a href="#"> 
-            <img src="resources/images/1.jpg" alt="">
-            <p>신발 <span class="tt">1</span></p>
-        </a>
-        <a href="#"> 
-            <img src="resources/images/1.jpg" alt="">
-            <p>신발 <span class="tt">1</span></p>
-        </a>
-        <a href="#"> 
-            <img src="resources/images/1.jpg" alt="">
-            <p>신발 <span class="tt">1</span></p>
-        </a>
+        <div class="resent_products">
+        <p class="tt">최근 본 상품이 없습니다.</p>
+    </div>
     </aside>
 </body>
 </html>
