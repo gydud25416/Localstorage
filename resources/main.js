@@ -11,36 +11,8 @@ document.addEventListener("DOMContentLoaded", function(){
     let imgList = JSON.parse(localStorage.getItem('imgList')) || [] ;//중복 배열 제거
     page.forEach(function(e) {
         e.addEventListener('click', function(el) {
-            if(numList.includes('1') == true){
-                console.log('1있습니다.')
-                el.preventDefault()
-                return false
-            }
-            if(numList.includes('2') == true){
-                console.log('2있습니다.')
-                el.preventDefault()
-                return false
-            }
-            if(numList.includes('3') == true){
-                console.log('3있습니다.')
-                el.preventDefault()
-                return false
-            }
-            if(numList.includes('4') == true){
-                console.log('4있습니다.')
-                el.preventDefault()
-                return false
-            }
-            if(numList.includes('5') == true){
-                console.log('5있습니다.')
-                el.preventDefault()
-                return false
-            }
-            if(numList.includes('6') == true){
-                console.log('6있습니다.')
-                el.preventDefault()
-                return false
-            }
+           
+             
             let v_num = el.target.parentElement.dataset.num;
             /* 최근 본 상품 태그 추가 */
             let addP = document.createElement("a");
@@ -60,7 +32,12 @@ document.addEventListener("DOMContentLoaded", function(){
             numList.push(v_num);
             imgList.push(img_src)
 
-    
+            if(numList.length > 3){ //세개이상 넘어가면
+                numList.shift(); //첫번째 배열 삭제
+                urlList.shift();
+                imgList.shift();
+                 
+            }
             // 로컬 스토리지에 JSON 형식으로 저장
             // localStorage.setItem("numList", JSON.stringify(Array.from(numList)));
             // localStorage.setItem("urlList", JSON.stringify(Array.from(urlList)));
@@ -70,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function(){
             localStorage.setItem("imgList", JSON.stringify(imgList))
             console.log(numList);
             console.log(urlList);
-            console.log(urlList[1]);
+            console.log(urlList[0]);
 
            
 
