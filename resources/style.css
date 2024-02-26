@@ -1,9 +1,10 @@
 *{margin:0; padding:0;}
-body{background:url(images/bg.png) center top;}
-a{color:#333; text-decoration: none;}
+/* body{background:url(images/bg.png) center top;} */
+body{background:#333;}
+a{color:#fff; text-decoration: none;}
 a:hover{text-decoration: underline; color:orange;}
 
-h1{text-align: center; font-size: 32px;}
+h1{text-align: center; font-size: 32px; color:#fff;}
 .pro {display: flex; flex-wrap: wrap; justify-content: space-between; width:800px; margin:0 auto;}
 .pro a{width:30%; margin-top:30px;} 
 .pro a img{width:100%; height:fit-content}
