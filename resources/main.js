@@ -6,9 +6,9 @@ document.addEventListener("DOMContentLoaded", function(){
     // let urlList = new Set(JSON.parse(localStorage.getItem('urlList')) || []); //중복 배열 제거
     // let numList = new Set(JSON.parse(localStorage.getItem('numList')) || []);//중복 배열 제거
     // let imgList = new Set(JSON.parse(localStorage.getItem('imgList')) || []);//중복 배열 제거
-    let urlList = JSON.parse(localStorage.getItem('urlList')) || [] ; //중복 배열 제거
-    let numList = JSON.parse(localStorage.getItem('numList')) || [] ;//중복 배열 제거
-    let imgList = JSON.parse(localStorage.getItem('imgList')) || [] ;//중복 배열 제거
+    let urlList = JSON.parse(localStorage.getItem('urlList')) || [] ;  
+    let numList = JSON.parse(localStorage.getItem('numList')) || [] ; 
+    let imgList = JSON.parse(localStorage.getItem('imgList')) || [] ; 
     page.forEach(function(e) {
         e.addEventListener('click', function(el) {
            
@@ -28,9 +28,9 @@ document.addEventListener("DOMContentLoaded", function(){
             addP.append(addImp); //img 추가
             addImp.setAttribute("src", img_src)//선택한 이미지 추가
     
-            urlList.push(p_url); // url 배열 추가
-            numList.push(v_num);
-            imgList.push(img_src)
+            urlList.push(p_url); // 배열 내 url 맨뒤에 추가
+            numList.push(v_num); // 배열 내 숫자 맨뒤에 추가
+            imgList.push(img_src) // 배열 내 이미지 맨뒤에 추가
 
             if(numList.length > 3){ //세개이상 넘어가면
                 numList.shift(); //첫번째 배열 삭제
